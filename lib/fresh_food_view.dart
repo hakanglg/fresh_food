@@ -42,12 +42,15 @@ class _FreshFoodViewState extends State<FreshFoodView> {
             child: ListView.builder(
               itemCount: 11,
               itemBuilder: (BuildContext context, int index) {
-                return Card(
-                  margin: EdgeInsets.fromLTRB(25, 15, 25, 5),
-                  color: Colors.grey,
-                  child: Container(
-                      height: MediaQuery.of(context).size.height * 0.07,
-                      child: Text("data")),
+                return Dismissible(
+                  key: Key("s"),
+                  child: Card(
+                    margin: EdgeInsets.fromLTRB(25, 15, 25, 5),
+                    color: Colors.grey[300],
+                    child: Container(
+                        height: MediaQuery.of(context).size.height * 0.07,
+                        child: Center(child: Text("data"))),
+                  ),
                 );
               },
             ),
